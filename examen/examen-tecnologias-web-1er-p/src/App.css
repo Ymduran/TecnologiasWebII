@@ -1,0 +1,205 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f6fc; /* Fondo general lila clarito muy suave */
+  color: #2b263b;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-principal {
+  max-width: 1100px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(90, 50, 120, 0.08);
+}
+
+/* --- ENCABEZADO --- */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0ebf8;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.encabezado h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2b263b;
+  margin: 0;
+}
+
+.encabezado nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.encabezado nav a {
+  text-decoration: none;
+  color: #6b5b95;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.encabezado nav a:hover {
+  color: #4a2e7a;
+  border-bottom: 2px solid #4a2e7a;
+  padding-bottom: 2px;
+}
+
+/* --- SECCIÓN BIENVENIDA --- */
+.bienvenida {
+  padding: 20px 0 50px 0;
+  border-bottom: 2px solid #f0ebf8;
+  margin-bottom: 40px;
+}
+
+.bienvenida h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2b263b;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.bienvenida p {
+  color: #6c6380;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-explorar {
+  background-color: #5b358c; /* Morado principal */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-explorar:hover {
+  background-color: #43246a; /* Morado más oscuro al pasar el mouse */
+  transform: translateY(-2px);
+}
+
+/* --- SECCIÓN PUBLICACIONES --- */
+.seccion-publicaciones h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b263b;
+  margin-bottom: 25px;
+}
+
+.lista-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* --- TARJETAS --- */
+.tarjeta {
+  background: #ffffff;
+  border: 1px solid #e6def2;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(100, 70, 140, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(100, 70, 140, 0.1);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #f2edf8;
+}
+
+.categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #8c78b5;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tarjeta h3 {
+  font-size: 1.15rem;
+  color: #2b263b;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.tarjeta a {
+  margin-top: auto;
+  text-decoration: none;
+  color: #5b358c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.tarjeta a:hover {
+  color: #351a59;
+  text-decoration: underline;
+}
+
+/* --- ETIQUETA DESTACADA --- */
+.etiqueta-destacada {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  background-color: #5b358c;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 2px solid #f0ebf8;
+  color: #8c78b5;
+  font-size: 0.9rem;
+}
+
+/* --- RESPONSIVO (Para celulares y pantallas pequeñas) --- */
+@media (max-width: 768px) {
+  .lista-tarjetas {
+    grid-template-columns: 1fr;
+  }
+  .encabezado {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .bienvenida h2 {
+    font-size: 2.2rem;
+  }
+}
